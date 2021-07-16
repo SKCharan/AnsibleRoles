@@ -1,0 +1,12 @@
+
+
+---
+
+ - hosts: 10.0.0.5
+   become: true
+   name: Install Java
+   tasks:
+     - name: update repos
+       apt: name="*" state=latest
+     - name: Install Java 1.8.0
+       apt: name=openjdk-8-jdk state=present update_cache=yes

@@ -1,0 +1,12 @@
+
+
+---
+
+ - name: Install MY_SQL(Assignment1.2)
+   hosts: 18.117.82.98
+   become: true
+   tasks:
+     - name: Install My_Sql
+       apt: name=mysql-server state=present
+     - name: Start MY_SQL
+       shell: "mysql_secure_installation"
