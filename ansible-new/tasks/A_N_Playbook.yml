@@ -1,0 +1,17 @@
+
+---
+
+ - hosts: 10.0.0.5
+   become: true
+   name: Install Apache
+   tasks: 
+     - name: Install Apache
+       apt: name=apache2 state=latest
+
+
+ - hosts: 10.0.0.6
+   become: true
+   name: Install nginx
+   tasks:
+     - name: Install nginx
+       apt: name=nginx state=latest
