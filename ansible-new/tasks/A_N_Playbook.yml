@@ -15,3 +15,6 @@
    tasks:
      - name: Install nginx
        apt: name=nginx state=latest
+     - name: Assignment2
+       script: tmp.1.txt
+       
